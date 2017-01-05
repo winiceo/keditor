@@ -19,8 +19,11 @@ editor.once('load', function() {
         asset.on('*:set', function (path, value) {
             editor.call('viewport:render');
         });
+ console.log("=================")
+        console.log(assets)
 
         var assetEngine = assets.get(asset.get('id'));
+        console.error(assetEngine)
         // render on asset load
         assetEngine.on('load', function() {
             editor.call('viewport:render');

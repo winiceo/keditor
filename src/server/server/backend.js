@@ -5,7 +5,7 @@ const shareDbAccess = require('sharedb-access')
 const racerSchema = require('racer-schema')
 const shareDbHooks = require('sharedb-hooks')
 const redisPubSub = require('sharedb-redis-pubsub')
-const racer = require('racer')
+const racer = require('../vendor/racer')
 const redis = require('redis-url')
 const initAdmins = require('./initAdmins')
 

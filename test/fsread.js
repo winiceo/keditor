@@ -24,7 +24,7 @@ function mkdir(url) {
 }
 fs.writeFileSync('./message.txt', 'Hello Node');
 
-lineReader.eachLine('editor.js', function(line, last) {
+lineReader.eachLine('code-editor.js', function(line, last) {
 
 
     
@@ -43,6 +43,7 @@ lineReader.eachLine('editor.js', function(line, last) {
 
       } 
       if(last){
+         write();
 
         //console.log(names)
         fs.writeFile("./file.json", JSON.stringify(names))

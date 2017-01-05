@@ -12,11 +12,22 @@ var source = require('vinyl-source-stream');
  * Live reload server.
  */
 module.exports = function(gulp, plugins) {
-    var json= JSON.parse(fs.readFileSync('./src/client/file.json', "utf8"));
-    var jss=[]
-    _.each(json,function(n){
-        jss.push("./src/client/app/"+n)
-    }) 
+    var editorjson= JSON.parse(fs.readFileSync('./src/client/editor.json', "utf8"));
+    var launchjson= JSON.parse(fs.readFileSync('./src/client/launch.json', "utf8"));
+    var codejson= JSON.parse(fs.readFileSync('./src/client/code.json', "utf8"));
+
+
+    var editors=[],launchs=[],codes=[]
+    _.each(editorjson,function(n){
+        editors.push("./src/client/app/"+n)
+    })
+    _.each(launchjson,function(n){
+        launchs.push("./src/client/app/"+n)
+    })
+
+     _.each(codejson,function(n){
+        codes.push("./src/client/app/"+n)
+    })
      var b = browserify({
         entries: "./src/client/index.js",
         debug: true
@@ -37,26 +48,41 @@ module.exports = function(gulp, plugins) {
             .pipe(gulp.dest('./public/static/js/'));
     });
 
-    gulp.task('client:js',function() {
+    gulp.task('client:editor',function() {
 
-        gulp.src(jss)
-            
-            // .pipe(plugins.order(json, { base: './src/client/app/' }))
+        gulp.src(editors)
             .pipe(plugins.concat('editor.js'))
-            //.pipe(uglify({mangle: false}))
             .pipe(gulp.dest('./public/static/js/'));
     });
+
+    gulp.task('client:launch',function() {
+
+        gulp.src(launchs)
+            .pipe(plugins.concat('launch.js'))
+            .pipe(gulp.dest('./public/static/js/'));
+    });
+
+     gulp.task('client:code',function() {
+
+        gulp.src(codes)
+            .pipe(plugins.concat('code-editor.js'))
+            .pipe(gulp.dest('./public/static/js/'));
+    });
+
     gulp.task('client:watch', function() {
         // Compile LESS files
-         gulp.watch('./src/client/app/**/*.js', ['client:js',plugins.browserSync.reload]);
+         gulp.watch('./src/client/app/**/*.js', ['client:build']);
 
         // gulp.watch([
         //     './src/client/app/**/*.js'
 
         // ]).on('change', plugins.browserSync.reload);
     });
+    gulp.task("client:build",['client:editor','client:launch','client:code'],function(){
+        plugins.browserSync.reload()
+    })
 
-    gulp.task('client:start',['client:clean','client:js','client:sharedb'], function() {
+    gulp.task('client:start',['client:clean','client:editor','client:launch','client:code','client:sharedb'], function() {
         plugins.browserSync.init({
             proxy: "http://localhost:4444/editor/scene/487784"
         });

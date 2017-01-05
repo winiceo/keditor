@@ -30,6 +30,7 @@ editor.once('load', function() {
     overlay.append(loading);
 
     editor.method('assets:progress', function(progress) {
+       
         loading.progress = progress;
     });
 

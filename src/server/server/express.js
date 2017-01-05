@@ -81,7 +81,7 @@ module.exports = (backend, appRoutes, error, options, cb) => {
     //var racerWebsocket = require('racer-websocket')(backend,{port:1111});
 
     //expressApp.use(racerWebsocket)
-     //expressApp.use(hwHandlers.middleware)
+     expressApp.use(hwHandlers.middleware)
 
     if (derbyLogin) {
       expressApp.use(derbyLogin.middleware(backend, options.login))

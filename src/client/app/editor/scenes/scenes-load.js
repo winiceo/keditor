@@ -38,7 +38,7 @@ editor.once('load', function () {
 
             return;
         }
-
+        
         editor.emit('scene:beforeload', id);
 
         editor.call('realtime:loadScene', id);

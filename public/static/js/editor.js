@@ -12830,6 +12830,7 @@ editor.once('load', function() {
                     for (var i = 0; i < ops.length; i++)
                         emitOp('scene', ops[i]);
                 });
+                console.error(scene.data)
 
                 // notify of scene load
                 editor.emit('scene:load', id);
@@ -27232,8 +27233,9 @@ editor.once('load', function() {
         });
 
         // ready to sync
-        doc.on('ready', function () {
-            var assetData = doc.getSnapshot();
+        doc.on('load', function () {
+            var assetData = doc.data;
+            //console.error(assetData)
             if (! assetData) {
                 console.error('Could not load asset: ' + id);
                 editor.call('status:error', 'Could not load asset: ' + id);
@@ -27242,7 +27244,7 @@ editor.once('load', function() {
             }
 
             // notify of operations
-            doc.on('after op', function (ops, local) {
+            doc.on('op', function (ops, local) {
                 if (local) return;
 
                 for (var i = 0; i < ops.length; i++) {
@@ -27320,12 +27322,12 @@ editor.once('load', function() {
 
             while (startBatch < total) {
                 // start bulk subscribe
-                connection.bsStart();
+                connection.startBulk();
                 for(var i = startBatch; i < startBatch + batchSize && i < total; i++) {
                     load(data[i].id);
                 }
                 // end bulk subscribe and send message to server
-                connection.bsEnd();
+                connection.endBulk();
 
                 startBatch += batchSize;
             }
@@ -27624,6 +27626,7 @@ editor.once('load', function() {
     overlay.append(loading);
 
     editor.method('assets:progress', function(progress) {
+       
         loading.progress = progress;
     });
 
@@ -34431,7 +34434,7 @@ editor.once('load', function () {
 
             return;
         }
-
+        
         editor.emit('scene:beforeload', id);
 
         editor.call('realtime:loadScene', id);
@@ -63880,9 +63883,11 @@ editor.once('load', function() {
 
         // parenting
         if (! obj.get('parent')) {
+            
             // root
             app.context.root.addChild(entity);
         } else {
+
             // child
             var details = childIndex[obj.get('resource_id')];
             if (details && details.parent) {
@@ -63917,6 +63922,9 @@ editor.once('load', function() {
         });
 
         var entities = editor.call('entities:list');
+
+
+        
         entities.forEach(processEntity);
     };
 
@@ -63927,6 +63935,7 @@ editor.once('load', function() {
 
     editor.once('assets:load', function () {
         assetsLoaded = true;
+        
         // if entities already loaded then create them
         if (entitiesLoaded)
             createEntities();
@@ -63934,6 +63943,7 @@ editor.once('load', function() {
 
     editor.once('entities:load', function() {
         entitiesLoaded = true;
+        
         // if assets already loaded then create entities
         if (assetsLoaded)
             createEntities();
@@ -64231,8 +64241,11 @@ editor.once('load', function() {
         asset.on('*:set', function (path, value) {
             editor.call('viewport:render');
         });
+ console.log("=================")
+        console.log(assets)
 
         var assetEngine = assets.get(asset.get('id'));
+        console.error(assetEngine)
         // render on asset load
         assetEngine.on('load', function() {
             editor.call('viewport:render');

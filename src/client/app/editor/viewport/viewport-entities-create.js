@@ -103,9 +103,11 @@ editor.once('load', function() {
 
         // parenting
         if (! obj.get('parent')) {
+            
             // root
             app.context.root.addChild(entity);
         } else {
+
             // child
             var details = childIndex[obj.get('resource_id')];
             if (details && details.parent) {
@@ -140,6 +142,9 @@ editor.once('load', function() {
         });
 
         var entities = editor.call('entities:list');
+
+
+        
         entities.forEach(processEntity);
     };
 
@@ -150,6 +155,7 @@ editor.once('load', function() {
 
     editor.once('assets:load', function () {
         assetsLoaded = true;
+        
         // if entities already loaded then create them
         if (entitiesLoaded)
             createEntities();
@@ -157,6 +163,7 @@ editor.once('load', function() {
 
     editor.once('entities:load', function() {
         entitiesLoaded = true;
+        
         // if assets already loaded then create entities
         if (assetsLoaded)
             createEntities();

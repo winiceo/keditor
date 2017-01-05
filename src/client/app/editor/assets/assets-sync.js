@@ -31,8 +31,9 @@ editor.once('load', function() {
         });
 
         // ready to sync
-        doc.on('ready', function () {
-            var assetData = doc.getSnapshot();
+        doc.on('load', function () {
+            var assetData = doc.data;
+            //console.error(assetData)
             if (! assetData) {
                 console.error('Could not load asset: ' + id);
                 editor.call('status:error', 'Could not load asset: ' + id);
@@ -41,7 +42,7 @@ editor.once('load', function() {
             }
 
             // notify of operations
-            doc.on('after op', function (ops, local) {
+            doc.on('op', function (ops, local) {
                 if (local) return;
 
                 for (var i = 0; i < ops.length; i++) {
@@ -119,12 +120,12 @@ editor.once('load', function() {
 
             while (startBatch < total) {
                 // start bulk subscribe
-                connection.bsStart();
+                connection.startBulk();
                 for(var i = startBatch; i < startBatch + batchSize && i < total; i++) {
                     load(data[i].id);
                 }
                 // end bulk subscribe and send message to server
-                connection.bsEnd();
+                connection.endBulk();
 
                 startBatch += batchSize;
             }

@@ -181,6 +181,7 @@ editor.once('load', function() {
                     for (var i = 0; i < ops.length; i++)
                         emitOp('scene', ops[i]);
                 });
+                console.error(scene.data)
 
                 // notify of scene load
                 editor.emit('scene:load', id);
