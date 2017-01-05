@@ -16,7 +16,7 @@ function getTask(task) {
     'less'   , 'prism'      , 'require'     , 'electron'  ,
     'htmlmin', 'cssmin'     , 'htmlManifest', 'mobile'    ,
     'copy'   , 'copyRelease', 'copyDist'    ,
-    'serve'  , 'clean'      , 'npm'
+    'serve'  , 'clean'      , 'npm',    'client'
 ]
 .forEach(function(task) {
     var taskFun = getTask(task);
@@ -68,6 +68,7 @@ gulp.task('release', plugins.sequence(
  * ``gulp --root dist`` to serve dist folder.
  */
 gulp.task('default', plugins.sequence(
-    ['less', 'prism'],
+
+    ['client:start','client:watch'],
     ['serve:start', 'serve:watch']
 ));

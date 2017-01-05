@@ -1,26 +1,37 @@
 'use strict';
-
+var spawn = require('child_process').spawn,
+    node;
 /**
  * Live reload server.
  */
 module.exports = function(gulp, plugins) {
 
-    gulp.task('serve:watch', function() {
-        // Compile LESS files
-        gulp.watch('app/styles/**/*.less', ['less']);
-
-        gulp.watch([
-            'app/**/*.html',
-            'app/scripts/**/*.js',
-            'app/locales/**/*.json',
-        ]).on('change', plugins.browserSync.reload);
-    });
 
     gulp.task('serve:start', function() {
-        return plugins.browserSync.init({
-            server : (plugins.util.env.root || 'app'),
-            port   : (plugins.util.env.port || 9000),
+        if (node) node.kill()
+        node = spawn('node', ['./src/server/index.js'], {stdio: 'inherit'})
+        node.on('close', function (code) {
+            if (code === 8) {
+                gulp.log('Error detected, waiting for changes...');
+            }
         });
+    })
+
+    gulp.task('serve:watch', function() {
+        // // Compile LESS files
+        // gulp.watch('app/styles/**/*.less', ['less']);
+        //
+        // gulp.watch([
+        //     'app/**/*.html',
+        //     'app/scripts/**/*.js',
+        //     'app/locales/**/*.json',
+        // ]).on('change', plugins.browserSync.reload);
+
+        gulp.watch(['./src/server/**/*.js'], function() {
+            gulp.run('server')
+        })
     });
+
+
 
 };

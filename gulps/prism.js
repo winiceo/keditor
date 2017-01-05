@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ * 语法着色库
  * Concatenate all Prism.js dependencies/languages into one file.
  */
 module.exports = function(gulp, plugins) {
