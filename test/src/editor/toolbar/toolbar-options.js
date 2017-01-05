@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-options.js */
 editor.once('load', function() {
     'use strict';
 

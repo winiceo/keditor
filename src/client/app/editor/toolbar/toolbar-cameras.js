@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-cameras.js */
 editor.once('viewport:load', function() {
     'use strict';
 

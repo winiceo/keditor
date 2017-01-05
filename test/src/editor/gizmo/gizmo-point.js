@@ -1,3 +1,4 @@
+/* editor/gizmo/gizmo-point.js */
 editor.once('viewport:load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/first-load.js */
 (function() {
     // first load
     document.addEventListener('DOMContentLoaded', function() {

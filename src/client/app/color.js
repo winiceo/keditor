@@ -1,3 +1,4 @@
+/* color.js */
 var rgb2hsv = function(rgb) {
     var rr, gg, bb,
         r = rgb[0] / 255,

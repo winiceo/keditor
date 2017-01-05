@@ -1,3 +1,4 @@
+/* editor/entities/entities-load.js */
 editor.on('load', function() {
     var hierarchyOverlay = new ui.Panel();
     hierarchyOverlay.class.add('overlay');

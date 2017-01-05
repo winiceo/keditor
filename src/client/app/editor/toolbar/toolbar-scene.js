@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-scene.js */
 editor.once('load', function() {
     'use strict';
 

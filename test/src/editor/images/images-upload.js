@@ -1,3 +1,4 @@
+/* editor/images/images-upload.js */
 editor.once('load', function () {
     editor.method('images:upload', function (file, callback, error) {
         if (!file || !file.size)

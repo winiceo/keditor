@@ -1,3 +1,4 @@
+/* editor/assets/assets-create-material.js */
 editor.once('load', function() {
     'use strict';
 

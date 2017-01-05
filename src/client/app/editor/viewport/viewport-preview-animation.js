@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-preview-animation.js */
 editor.once('load', function() {
     'use strict';
 

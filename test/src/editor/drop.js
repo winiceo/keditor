@@ -1,3 +1,4 @@
+/* editor/drop.js */
 editor.once('load', function() {
     'use strict';
 

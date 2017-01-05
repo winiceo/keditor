@@ -1,3 +1,4 @@
+/* editor/sourcefiles/sourcefiles-attributes-scan.js */
 editor.once('load', function () {
     if(! editor.call('project:settings').get('use_legacy_scripts'))
         return;

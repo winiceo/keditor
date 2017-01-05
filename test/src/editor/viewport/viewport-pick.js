@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-pick.js */
 editor.once('load', function() {
     'use strict';
 

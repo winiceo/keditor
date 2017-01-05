@@ -1,3 +1,4 @@
+/* editor/camera/camera-preview.js */
 editor.once('load', function() {
     'use sctrict';
 

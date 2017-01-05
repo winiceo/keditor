@@ -1,3 +1,4 @@
+/* editor/camera/camera-focus.js */
 editor.once('viewport:load', function() {
     'use strict';
 

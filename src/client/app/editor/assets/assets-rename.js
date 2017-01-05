@@ -1,3 +1,4 @@
+/* editor/assets/assets-rename.js */
 editor.once('load', function() {
     'use strict';
 

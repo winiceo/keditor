@@ -1,3 +1,4 @@
+/* editor/assets/assets-preview-cubemap.js */
 editor.once('load', function() {
     'use strict';
 

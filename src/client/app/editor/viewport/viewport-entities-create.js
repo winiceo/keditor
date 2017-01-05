@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-entities-create.js */
 editor.once('load', function() {
     'use strict';
 

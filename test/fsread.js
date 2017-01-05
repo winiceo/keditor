@@ -33,7 +33,7 @@ lineReader.eachLine('editor.js', function(line, last) {
         if(lines.length>0&&fileName){
             write();
         }
-        
+        lines.push(line)
          var reg = /\/\*(.*)\*\//g; 
          var tmp = reg.exec(line);
           fileName=tmp[1].trim()

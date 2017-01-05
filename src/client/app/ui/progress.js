@@ -1,3 +1,4 @@
+/* ui/progress.js */
 "use strict";
 
 function Progress(args) {

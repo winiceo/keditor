@@ -1,3 +1,4 @@
+/* editor/pickers/picker-script-create.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/pickers/picker-publish-new.js */
 editor.once('load', function () {
     'use strict';
 

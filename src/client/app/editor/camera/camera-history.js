@@ -1,3 +1,4 @@
+/* editor/camera/camera-history.js */
 editor.once('load', function() {
     'use strict';
 

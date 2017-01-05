@@ -4,6 +4,8 @@ var spawn = require('child_process').spawn,
     fs=require("fs");
 var _=require("lodash")
 
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
 //var json=require("../src/client/file.json")
 
 /**
@@ -15,11 +17,24 @@ module.exports = function(gulp, plugins) {
     _.each(json,function(n){
         jss.push("./src/client/app/"+n)
     }) 
-    gulp.task('client:shardeb', function() {
-      return plugins.browserify('./src/client/sharedbClient.js')
-        
-        
-       .pipe(gulp.dest('./src/client/sharedb.js'));
+     var b = browserify({
+        entries: "./src/client/index.js",
+        debug: true
+    });
+
+      gulp.task('client:clean', function() {
+        return plugins.del(['./public/static']);
+    });
+
+     
+    gulp.task('client:sharedb', function() {
+        return b
+            .bundle()
+
+            //Pass desired output filename to vinyl-source-stream
+            .pipe(source('sharedb.js'))
+            // Start piping stream to tasks!
+            .pipe(gulp.dest('./public/static/js/'));
     });
 
     gulp.task('client:js',function() {
@@ -41,7 +56,7 @@ module.exports = function(gulp, plugins) {
         // ]).on('change', plugins.browserSync.reload);
     });
 
-    gulp.task('client:start', function() {
+    gulp.task('client:start',['client:clean','client:js','client:sharedb'], function() {
         plugins.browserSync.init({
             proxy: "http://localhost:4444/editor/scene/487784"
         });

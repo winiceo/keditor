@@ -1,3 +1,4 @@
+/* editor/project/project-private-settings-sync.js */
 editor.once('load', function() {
     'use strict';
 

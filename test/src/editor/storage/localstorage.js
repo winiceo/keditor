@@ -1,3 +1,4 @@
+/* editor/storage/localstorage.js */
 editor.once('load', function () {
     // Get a key from the local storage
     editor.method('localStorage:get', function (key) {

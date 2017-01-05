@@ -1,3 +1,4 @@
+/* ui/code.js */
 "use strict";
 
 function Code() {

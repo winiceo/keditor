@@ -1,3 +1,4 @@
+/* editor/sourcefiles/sourcefiles-skeleton.js */
 editor.once('load', function () {
     'use strict';
 

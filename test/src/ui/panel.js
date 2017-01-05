@@ -1,3 +1,4 @@
+/* ui/panel.js */
 "use strict";
 
 function Panel(header) {

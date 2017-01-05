@@ -1,3 +1,4 @@
+/* editor/camera/camera-user.js */
 editor.once('load', function() {
     'use sctrict';
 

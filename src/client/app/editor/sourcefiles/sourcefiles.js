@@ -1,3 +1,4 @@
+/* editor/sourcefiles/sourcefiles.js */
 editor.once('repositories:load', function (repositories) {
     'use strict';
 

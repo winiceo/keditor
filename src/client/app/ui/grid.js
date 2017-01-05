@@ -1,3 +1,4 @@
+/* ui/grid.js */
 "use strict";
 
 function Grid() {

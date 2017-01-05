@@ -1,3 +1,4 @@
+/* editor/chat/chat-notifications.js */
 editor.once('load', function() {
     'use strict';
 

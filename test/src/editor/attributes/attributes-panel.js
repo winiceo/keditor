@@ -1,3 +1,4 @@
+/* editor/attributes/attributes-panel.js */
 editor.once('load', function() {
     'use strict';
 

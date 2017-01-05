@@ -1,3 +1,4 @@
+/* editor/contextmenu.js */
 editor.once('load', function() {
     'use strict';
 

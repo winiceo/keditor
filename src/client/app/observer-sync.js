@@ -1,3 +1,4 @@
+/* observer-sync.js */
 function ObserverSync(args) {
     Events.call(this);
     args = args || { };

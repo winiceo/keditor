@@ -1,3 +1,4 @@
+/* editor/refocus.js */
 editor.once('load', function() {
     'use strict';
 

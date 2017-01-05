@@ -1,3 +1,4 @@
+/* editor/project/project-scripts-order.js */
 editor.once('load', function() {
     'use strict';
 

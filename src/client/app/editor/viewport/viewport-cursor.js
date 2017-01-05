@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-cursor.js */
 editor.once('load', function() {
     'use strict';
 

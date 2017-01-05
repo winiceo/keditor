@@ -1,3 +1,4 @@
+/* editor/assets/assets-preview-model.js */
 editor.once('load', function() {
     'use strict';
 

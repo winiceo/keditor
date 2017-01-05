@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-outline.js */
 editor.once('load', function() {
     'use strict';
 

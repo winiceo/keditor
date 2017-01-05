@@ -1,3 +1,4 @@
+/* ui/tooltip.js */
 "use strict";
 
 function Tooltip(args) {

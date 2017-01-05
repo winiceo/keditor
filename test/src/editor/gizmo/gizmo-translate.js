@@ -1,3 +1,4 @@
+/* editor/gizmo/gizmo-translate.js */
 editor.once('load', function() {
     'use strict';
 

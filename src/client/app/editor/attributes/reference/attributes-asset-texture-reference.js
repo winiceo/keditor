@@ -1,3 +1,4 @@
+/* editor/attributes/reference/attributes-asset-texture-reference.js */
 editor.once('load', function() {
     'use strict';
 

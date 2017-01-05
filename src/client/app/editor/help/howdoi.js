@@ -1,3 +1,4 @@
+/* editor/help/howdoi.js */
 editor.once('load', function () {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* ui/autocomplete-element.js */
 "use strict";
 
 function AutoCompleteElement() {

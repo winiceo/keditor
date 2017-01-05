@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-scene-settings.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-application.js */
 editor.once('load', function() {
     var time;
     var rect = new pc.Vec4(0, 0, 1, 1);

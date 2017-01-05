@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-contact.js */
 editor.once('load', function() {
     'use strict';
 

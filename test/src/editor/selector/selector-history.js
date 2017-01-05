@@ -1,3 +1,4 @@
+/* editor/selector/selector-history.js */
 editor.once('load', function() {
     'use strict';
 

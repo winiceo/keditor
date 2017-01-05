@@ -1,3 +1,4 @@
+/* observer.js */
 "use strict";
 
 function Observer(data, options) {

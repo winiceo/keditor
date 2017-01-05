@@ -1,3 +1,4 @@
+/* editor/hotkeys.js */
 editor.once('load', function() {
     'use strict';
 

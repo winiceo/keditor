@@ -1,3 +1,4 @@
+/* editor/assets/assets-script-parse.js */
 editor.once('load', function() {
     'use strict';
 

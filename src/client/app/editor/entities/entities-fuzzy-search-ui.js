@@ -1,3 +1,4 @@
+/* editor/entities/entities-fuzzy-search-ui.js */
 editor.once('load', function() {
     'use strict';
 

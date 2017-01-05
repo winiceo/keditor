@@ -1,3 +1,4 @@
+/* editor/assets/assets-upload.js */
 editor.once('load', function() {
     'use strict';
 

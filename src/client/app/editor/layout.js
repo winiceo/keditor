@@ -1,3 +1,4 @@
+/* editor/layout.js */
 editor.on('load', function() {
     'use strict';
 

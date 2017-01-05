@@ -1,3 +1,4 @@
+/* editor/assets/assets-unwrap.js */
 editor.once('load', function() {
     'use strict';
 

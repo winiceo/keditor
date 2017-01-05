@@ -1,3 +1,4 @@
+/* ui/element.js */
 "use strict";
 
 function Element() {

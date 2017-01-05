@@ -1,3 +1,4 @@
+/* editor/pickers/picker-confirm.js */
 editor.once('load', function() {
     'use strict';
 

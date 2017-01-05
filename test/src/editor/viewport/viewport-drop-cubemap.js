@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-drop-cubemap.js */
 editor.once('load', function() {
     'use strict';
 

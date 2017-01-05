@@ -1,3 +1,4 @@
+/* editor/attributes/components/attributes-components-audiosource.js */
 editor.once('load', function() {
     'use strict';
 

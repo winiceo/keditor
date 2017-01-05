@@ -1,3 +1,4 @@
+/* editor/whoisonline/whoisonline-colors.js */
 editor.once('load', function() {
     'use strict';
 

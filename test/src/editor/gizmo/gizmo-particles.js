@@ -1,3 +1,4 @@
+/* editor/gizmo/gizmo-particles.js */
 editor.once('load', function () {
     'use strict';
 

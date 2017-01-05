@@ -1,3 +1,4 @@
+/* ui/container-element.js */
 "use strict";
 
 function ContainerElement() {

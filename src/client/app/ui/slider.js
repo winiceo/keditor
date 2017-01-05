@@ -1,3 +1,4 @@
+/* ui/slider.js */
 "use strict";
 
 function Slider(args) {

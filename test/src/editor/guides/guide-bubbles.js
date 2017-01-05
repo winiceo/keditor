@@ -1,3 +1,4 @@
+/* editor/guides/guide-bubbles.js */
 editor.once('load', function() {
     'use strict';
 

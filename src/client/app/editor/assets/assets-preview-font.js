@@ -1,3 +1,4 @@
+/* editor/assets/assets-preview-font.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-focus.js */
 editor.once('load', function() {
     'use strict';
 

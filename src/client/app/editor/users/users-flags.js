@@ -1,3 +1,4 @@
+/* editor/users/users-flags.js */
 editor.once("load", function () {
     'use strict';
 

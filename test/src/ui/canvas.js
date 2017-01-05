@@ -1,3 +1,4 @@
+/* ui/canvas.js */
 "use strict";
 
 function Canvas(args) {

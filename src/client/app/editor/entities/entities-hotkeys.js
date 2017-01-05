@@ -1,3 +1,4 @@
+/* editor/entities/entities-hotkeys.js */
 editor.once('load', function() {
     'use strict';
 

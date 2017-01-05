@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-tooltips.js */
 editor.once('load', function() {
     'use strict';
 

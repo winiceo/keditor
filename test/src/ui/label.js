@@ -1,3 +1,4 @@
+/* ui/label.js */
 "use strict";
 
 function Label(args) {

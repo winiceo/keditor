@@ -1,3 +1,4 @@
+/* editor/scenes/scenes.js */
 editor.once('load', function () {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-drop-model.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/assets/assets-delete.js */
 editor.once('load', function() {
     'use strict';
 

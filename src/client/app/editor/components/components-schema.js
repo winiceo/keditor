@@ -1,3 +1,4 @@
+/* editor/components/components-schema.js */
 editor.once('load', function() {
     'use strict';
 

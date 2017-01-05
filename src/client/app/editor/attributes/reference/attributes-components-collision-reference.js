@@ -1,3 +1,4 @@
+/* editor/attributes/reference/attributes-components-collision-reference.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/assets/assets-cubemap-prefiltering.js */
 editor.once('load', function () {
 
     var app = null;

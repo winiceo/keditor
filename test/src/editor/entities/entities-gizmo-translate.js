@@ -1,3 +1,4 @@
+/* editor/entities/entities-gizmo-translate.js */
 editor.once('load', function() {
     'use strict';
 

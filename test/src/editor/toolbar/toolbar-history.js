@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-history.js */
 editor.once('load', function() {
     'use strict';
 

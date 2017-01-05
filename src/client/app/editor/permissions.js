@@ -1,3 +1,4 @@
+/* editor/permissions.js */
 editor.once('load', function() {
     'use strict';
 

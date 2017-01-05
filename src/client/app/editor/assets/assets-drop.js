@@ -1,3 +1,4 @@
+/* editor/assets/assets-drop.js */
 editor.once('load', function() {
     'use strict';
 

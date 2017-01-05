@@ -1,3 +1,4 @@
+/* editor/repositories/repositories.js */
 editor.once('load', function() {
     'use strict';
 

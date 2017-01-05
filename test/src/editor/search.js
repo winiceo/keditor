@@ -1,3 +1,4 @@
+/* editor/search.js */
 editor.once('load', function() {
     'use strict';
 

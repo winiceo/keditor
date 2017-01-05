@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-lightmapper.js */
 editor.once('load', function() {
     'use strict';
 

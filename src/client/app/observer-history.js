@@ -1,3 +1,4 @@
+/* observer-history.js */
 function ObserverHistory(args) {
     Events.call(this);
     args = args || { };

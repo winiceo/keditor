@@ -1,3 +1,4 @@
+/* editor/entities/entities-clipboard.js */
 editor.once('load', function () {
     var CLIPBOARD_NAME = 'playcanvas_editor_clipboard';
     var CLIPBOARD_META = CLIPBOARD_NAME + '_meta';

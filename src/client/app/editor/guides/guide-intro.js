@@ -1,3 +1,4 @@
+/* editor/guides/guide-intro.js */
 editor.once('load', function () {
     'use strict';
 

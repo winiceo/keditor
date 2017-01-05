@@ -28,7 +28,7 @@ module.exports = function(gulp, plugins) {
         // ]).on('change', plugins.browserSync.reload);
 
         gulp.watch(['./src/server/**/*.js'], function() {
-            gulp.run('server')
+            gulp.run('server:start')
         })
     });
 

@@ -1,3 +1,4 @@
+/* editor/project/project-migration.js */
 editor.once('load', function() {
     'use strict';
 

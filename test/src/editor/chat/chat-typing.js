@@ -1,3 +1,4 @@
+/* editor/chat/chat-typing.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/pickers/picker-asset.js */
 editor.once('load', function() {
     'use strict';
 

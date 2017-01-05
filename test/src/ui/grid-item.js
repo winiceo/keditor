@@ -1,3 +1,4 @@
+/* ui/grid-item.js */
 "use strict";
 
 function GridItem(args) {

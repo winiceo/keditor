@@ -1,3 +1,4 @@
+/* ui/curve-field.js */
 "use strict"
 
 function CurveField(args) {

@@ -1,3 +1,4 @@
+/* editor/gizmo/gizmo-rotate.js */
 editor.once('load', function() {
     'use strict';
 

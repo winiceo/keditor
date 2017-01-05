@@ -1,3 +1,4 @@
+/* editor/camera/camera-userdata.js */
 editor.once('camera:load', function() {
     'use strict';
 

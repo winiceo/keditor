@@ -1,3 +1,4 @@
+/* editor/apps/apps.js */
 editor.once('load', function () {
     'use strict';
 

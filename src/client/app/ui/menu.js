@@ -1,3 +1,4 @@
+/* ui/menu.js */
 "use strict";
 
 function Menu(args) {

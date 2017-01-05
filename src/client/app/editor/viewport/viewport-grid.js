@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-grid.js */
 pc.Grid = function (device, size, divisions) {
     // Create the vertex format
     var vertexFormat = new pc.gfx.VertexFormat(device, [

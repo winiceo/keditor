@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-gizmos.js */
 editor.once('load', function() {
     'use strict';
 

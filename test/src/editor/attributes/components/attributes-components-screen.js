@@ -1,3 +1,4 @@
+/* editor/attributes/components/attributes-components-screen.js */
 editor.once('load', function() {
     'use strict';
 

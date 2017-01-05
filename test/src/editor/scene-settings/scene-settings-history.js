@@ -1,3 +1,4 @@
+/* editor/scene-settings/scene-settings-history.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-script.js */
 editor.once('load', function () {
     'use script';
 

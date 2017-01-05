@@ -1,3 +1,4 @@
+/* editor/editor.js */
 (function() {
     'use strict';
 

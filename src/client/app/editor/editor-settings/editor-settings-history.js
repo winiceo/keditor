@@ -1,3 +1,4 @@
+/* editor/editor-settings/editor-settings-history.js */
 editor.once('load', function() {
     'use strict';
 

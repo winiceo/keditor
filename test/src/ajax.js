@@ -1,3 +1,4 @@
+/* ajax.js */
 function Ajax(args) {
     if (typeof(args) === 'string')
         args = { url: args };

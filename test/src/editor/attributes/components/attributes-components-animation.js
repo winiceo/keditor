@@ -1,3 +1,4 @@
+/* editor/attributes/components/attributes-components-animation.js */
 editor.once('load', function() {
     'use strict';
 

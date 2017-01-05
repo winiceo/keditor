@@ -1,3 +1,4 @@
+/* ui/button.js */
 "use strict";
 
 function Button(args) {

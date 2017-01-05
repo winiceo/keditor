@@ -1,3 +1,4 @@
+/* editor/scene-settings/scene-settings-priority-scripts.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/gizmo/gizmo-bounding-box.js */
 editor.once('load', function () {
     'use strict';
     var app = null;

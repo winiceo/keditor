@@ -1,3 +1,4 @@
+/* editor/entities/entities-user-color.js */
 editor.once('load', function() {
     'use strict';
 

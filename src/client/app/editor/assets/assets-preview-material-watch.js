@@ -1,3 +1,4 @@
+/* editor/assets/assets-preview-material-watch.js */
 editor.once('load', function() {
     'use strict';
 

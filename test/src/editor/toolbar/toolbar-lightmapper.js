@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-lightmapper.js */
 editor.once('load', function() {
     'use strict';
 

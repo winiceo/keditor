@@ -1,3 +1,4 @@
+/* editor/toolbar/toolbar-logo.js */
 editor.once('load', function() {
     'use strict';
 

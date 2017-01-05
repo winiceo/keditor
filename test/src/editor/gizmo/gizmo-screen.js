@@ -1,3 +1,4 @@
+/* editor/gizmo/gizmo-screen.js */
 editor.once('load', function() {
     'use strict';
 

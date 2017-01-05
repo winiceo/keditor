@@ -1,3 +1,4 @@
+/* editor/camera/camera-look-around.js */
 editor.once('viewport:load', function() {
     'use strict';
 

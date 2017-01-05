@@ -1,3 +1,4 @@
+/* editor/realtime.js */
 editor.once('load', function() {
     'use strict';
 
@@ -143,7 +144,7 @@ editor.once('load', function() {
             // create new socket...
             socket = new WebSocket(config.url.realtime.http);
             // ... and new sharejs connection
-            connection = new sharejs.Connection(socket);
+            connection = new sharedb.Connection(socket);
             // connect again
             connect();
         };
@@ -171,9 +172,10 @@ editor.once('load', function() {
             });
 
             // ready to sync
-            scene.on('ready', function() {
+            //sharedb ready->load
+            scene.on('load', function() {
                 // notify of operations
-                scene.on('after op', function(ops, local) {
+                scene.on('op', function(ops, local) {
                     if (local) return;
 
                     for (var i = 0; i < ops.length; i++)
@@ -182,7 +184,7 @@ editor.once('load', function() {
 
                 // notify of scene load
                 editor.emit('scene:load', id);
-                editor.emit('scene:raw', scene.getSnapshot());
+                editor.emit('scene:raw', scene.data);
             });
 
             // subscribe for realtime events

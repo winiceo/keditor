@@ -1,3 +1,4 @@
+/* editor/assets/assets-migrate.js */
 editor.once('load', function() {
     'use strict';
 

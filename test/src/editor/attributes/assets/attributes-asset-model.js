@@ -1,3 +1,4 @@
+/* editor/attributes/assets/attributes-asset-model.js */
 editor.once('load', function() {
     'use strict';
 

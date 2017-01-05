@@ -1,3 +1,4 @@
+/* editor/pickers/picker-curve.js */
 editor.once('load', function() {
     'use strict';
 

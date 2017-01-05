@@ -1,3 +1,4 @@
+/* ui/checkbox.js */
 "use strict";
 
 function Checkbox(args) {

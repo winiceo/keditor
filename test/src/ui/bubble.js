@@ -1,3 +1,4 @@
+/* ui/bubble.js */
 "use strict";
 
 function Bubble(args) {

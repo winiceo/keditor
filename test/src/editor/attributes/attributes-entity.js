@@ -1,3 +1,4 @@
+/* editor/attributes/attributes-entity.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/messenger.js */
 editor.on('start', function() {
     'use strict';
 

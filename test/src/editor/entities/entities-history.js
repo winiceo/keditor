@@ -1,3 +1,4 @@
+/* editor/entities/entities-history.js */
 editor.once('load', function() {
     'use strict';
 

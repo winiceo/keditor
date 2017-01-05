@@ -1,3 +1,4 @@
+/* editor/attributes/assets/attributes-asset-font.js */
 editor.once('load', function() {
     'use strict';
 

@@ -1,3 +1,4 @@
+/* editor/selector/selector.js */
 editor.once('load', function() {
     'use strict';
 

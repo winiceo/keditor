@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-resize.js */
 editor.once('load', function() {
     'use strict'
 

@@ -1,3 +1,4 @@
+/* editor/entities/entities-sync.js */
 editor.once('load', function() {
     'use strict';
 

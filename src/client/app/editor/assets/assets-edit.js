@@ -1,3 +1,4 @@
+/* editor/assets/assets-edit.js */
 editor.once('load', function() {
     'use strict';
 

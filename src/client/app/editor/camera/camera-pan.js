@@ -1,3 +1,4 @@
+/* editor/camera/camera-pan.js */
 editor.once('viewport:load', function(app) {
     'use strict';
 

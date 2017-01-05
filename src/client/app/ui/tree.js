@@ -1,3 +1,4 @@
+/* ui/tree.js */
 "use strict";
 
 function Tree() {

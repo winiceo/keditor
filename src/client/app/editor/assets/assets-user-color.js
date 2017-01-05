@@ -1,3 +1,4 @@
+/* editor/assets/assets-user-color.js */
 editor.once('load', function() {
     'use strict';
 

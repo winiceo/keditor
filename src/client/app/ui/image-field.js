@@ -1,3 +1,4 @@
+/* ui/image-field.js */
 "use strict";
 
 function ImageField(args) {

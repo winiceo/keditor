@@ -1,3 +1,4 @@
+/* editor/selector/selector-sync.js */
 editor.once('load', function() {
     'use strict';
 

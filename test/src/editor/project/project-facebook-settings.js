@@ -1,3 +1,4 @@
+/* editor/project/project-facebook-settings.js */
 editor.once('load', function() {
     'use strict';
 

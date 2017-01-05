@@ -1,3 +1,4 @@
+/* ui/color-field.js */
 "use strict"
 
 function ColorField(args) {

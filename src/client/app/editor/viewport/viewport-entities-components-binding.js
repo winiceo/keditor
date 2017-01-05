@@ -1,3 +1,4 @@
+/* editor/viewport/viewport-entities-components-binding.js */
 editor.once('load', function() {
     'use strict';
 

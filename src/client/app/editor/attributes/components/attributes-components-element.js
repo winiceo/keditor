@@ -1,3 +1,4 @@
+/* editor/attributes/components/attributes-components-element.js */
 editor.once('load', function() {
     'use strict';
 

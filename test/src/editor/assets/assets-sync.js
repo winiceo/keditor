@@ -1,3 +1,4 @@
+/* editor/assets/assets-sync.js */
 editor.once('load', function() {
     'use strict';
 

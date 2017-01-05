@@ -1,3 +1,4 @@
+/* editor/attributes/reference/attributes-entity-reference.js */
 editor.once('load', function() {
     'use strict';
 

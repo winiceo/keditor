@@ -1,3 +1,4 @@
+/* editor/help/controls.js */
 editor.once('load', function() {
     'use strict';
 

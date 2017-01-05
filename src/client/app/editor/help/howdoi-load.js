@@ -1,3 +1,4 @@
+/* editor/help/howdoi-load.js */
 editor.once('load', function () {
     var data = {
         url: config.url.howdoi,

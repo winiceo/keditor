@@ -1,3 +1,4 @@
+/* ui/overlay.js */
 "use strict"
 
 function Overlay(args) {

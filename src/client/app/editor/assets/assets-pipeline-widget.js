@@ -1,3 +1,4 @@
+/* editor/assets/assets-pipeline-widget.js */
 editor.once('load', function() {
     'use strict';
 

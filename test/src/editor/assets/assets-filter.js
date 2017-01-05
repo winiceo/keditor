@@ -1,3 +1,4 @@
+/* editor/assets/assets-filter.js */
 editor.once('load', function() {
     'use strict';
 

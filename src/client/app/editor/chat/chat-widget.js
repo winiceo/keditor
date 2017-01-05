@@ -1,3 +1,4 @@
+/* editor/chat/chat-widget.js */
 editor.once('load', function() {
     'use strict';
 

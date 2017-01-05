@@ -1,3 +1,4 @@
+/* editor/assets/assets-duplicate.js */
 editor.once('load', function() {
     'use strict';
 

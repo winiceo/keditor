@@ -1,3 +1,4 @@
+/* editor/gizmo/gizmo-camera.js */
 editor.once('load', function () {
     'use strict';
 

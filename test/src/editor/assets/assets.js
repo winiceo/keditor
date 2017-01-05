@@ -1,3 +1,4 @@
+/* editor/assets/assets.js */
  
 
 editor.once('load', function() {

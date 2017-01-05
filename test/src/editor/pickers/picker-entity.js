@@ -1,3 +1,4 @@
+/* editor/pickers/picker-entity.js */
 editor.once('load', function() {
     'use strict';
 

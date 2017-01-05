@@ -1,3 +1,4 @@
+/* editor/userdata/userdata.js */
 editor.once('load', function() {
     'use strict';
 
