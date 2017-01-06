@@ -22,9 +22,9 @@ function mkdir(url) {
         else console.log('pow!')
     });
 }
-fs.writeFileSync('./message.txt', 'Hello Node');
+//fs.writeFileSync('./message.txt', 'Hello Node');
 
-lineReader.eachLine('code-editor.js', function(line, last) {
+lineReader.eachLine('launch.js', function(line, last) {
 
 
     
@@ -46,16 +46,16 @@ lineReader.eachLine('code-editor.js', function(line, last) {
          write();
 
         //console.log(names)
-        fs.writeFile("./file.json", JSON.stringify(names))
+        fs.writeFile("./launch.json", JSON.stringify(names))
 
       }
 });
 
 function write(){
      names.push(fileName)
-     var file=__dirname+"/src/"+fileName
+     var file=__dirname+"/launch/"+fileName
      mkdir(file)
-     console.log(__dirname+"/src/"+fileName)
+     console.log(__dirname+"/launch/"+fileName)
      fs.writeFile(file, lines.join("\n"), (err) => {
       if (err) throw err;
       console.log('It\'s saved!');

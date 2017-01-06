@@ -1,3 +1,4 @@
+
 /* utils.js */
 var utils = { };
 
@@ -89,7 +90,6 @@ var bytesToHuman = function(bytes) {
 
 
 /* ajax.js */
-
 function Ajax(args) {
     if (typeof(args) === 'string')
         args = { url: args };
@@ -4397,11 +4397,7 @@ editor.once('load', function() {
             // add all awaiting children
             for(var i = 0; i < awaitingParent[obj.get('resource_id')].length; i++) {
                 var awaiting = awaitingParent[obj.get('resource_id')][i];
-                //原来是这个，有问题。
                 entity.addChild(app.root.getByGuid(awaiting.get('resource_id')));
-
-                //var awaitEntity=createEntity(awaiting);
-                //entity.addChild(awaitEntity);
             }
 
             // delete awaiting queue
@@ -4420,16 +4416,12 @@ editor.once('load', function() {
     };
 
     editor.on('entities:add', function (obj) {
-       
         var sceneLoading = editor.call("isLoadingScene");
-
-        //console.log([ app.root.findByGuid(obj.get('resource_id')) ,sceneLoading])
         if (! app.root.findByGuid(obj.get('resource_id')) && !sceneLoading) {
             // create entity if it does not exist and all initial entities have loaded
-             
             processEntity(obj);
         }
-        
+
         // subscribe to changes
         obj.on('*:set', function(path, value) {
             var entity = app.root.findByGuid(obj.get('resource_id'));
@@ -5022,8 +5014,8 @@ editor.once('load', function() {
         });
 
         // ready to sync
-        doc.on('load', function () {
-            var assetData = doc.data;
+        doc.on('ready', function () {
+            var assetData = doc.getSnapshot();
             if (! assetData) {
                 console.error('Could not load asset: ' + id);
                 doc.destroy();
@@ -5031,7 +5023,7 @@ editor.once('load', function() {
             }
 
             // notify of operations
-            doc.on('op', function (ops, local) {
+            doc.on('after op', function (ops, local) {
                 if (local) return;
 
                 for (var i = 0; i < ops.length; i++) {
@@ -5130,12 +5122,12 @@ editor.once('load', function() {
 
             while (startBatch < total) {
                 // start bulk subscribe
-                connection.startBulk();
+                connection.bsStart();
                 for(var i = startBatch; i < startBatch + batchSize && i < total; i++) {
                     load(data[i].id);
                 }
                 // end bulk subscribe and send message to server
-                connection.endBulk();
+                connection.bsEnd();
 
                 startBatch += batchSize;
             }
@@ -5421,7 +5413,7 @@ editor.once('load', function() {
         // create new socket...
         socket = new WebSocket(config.url.realtime.http);
         // ... and new sharejs connection
-        connection = new sharedb.Connection(socket);
+        connection = new sharejs.Connection(socket);
         // connect again
         connect();
     };
@@ -5444,7 +5436,7 @@ editor.once('load', function() {
     var loadScene = function(id, callback, settingsOnly) {
         if (loaded[id]) {
             if (callback)
-                callback(null, loaded[id].data);
+                callback(null, loaded[id].getSnapshot());
 
             return;
         }
@@ -5461,12 +5453,12 @@ editor.once('load', function() {
         });
 
         // ready to sync
-        scene.on('load', function() {
+        scene.on('ready', function() {
             // cache loaded scene for any subsequent load requests
             loaded[id] = scene;
 
             // notify of operations
-            scene.on('op', function(ops, local) {
+            scene.on('after op', function(ops, local) {
                 if (local)
                     return;
 
@@ -5482,17 +5474,13 @@ editor.once('load', function() {
             });
 
             // notify of scene load
-            var snapshot = scene.data;
-             // todo
-             //isLoading = false;//??
-             //console.log(snapshot)
+            var snapshot = scene.getSnapshot();
             if (settingsOnly !== true) {
                 editor.emit('scene:raw', snapshot);
             }
             if (callback) {
                 callback(null, snapshot);
             }
-             
 
             isLoading = false;
         });

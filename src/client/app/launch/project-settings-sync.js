@@ -10,7 +10,6 @@ editor.once('load', function() {
 
     // handle changes by others
     editor.on('messenger:project.update', function (data) {
-        alert(4)
         for (var path in data) {
             if (! path.startsWith('settings.'))
                 continue;

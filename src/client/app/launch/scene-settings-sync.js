@@ -7,7 +7,7 @@ editor.once('load', function() {
             item: settings,
             prefix: [ 'settings' ]
         });
- 
+
         // client > server
         settings.sync.on('op', function(op) {
             editor.call('realtime:op', op);

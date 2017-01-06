@@ -27,7 +27,7 @@ module.exports = function(gulp, plugins) {
         //     'app/locales/**/*.json',
         // ]).on('change', plugins.browserSync.reload);
 
-        gulp.watch(['./src/server/**/*.js','./src/template/**/*'], function() {
+        gulp.watch(['./src/server/**/*.js','./src/template/*'], function() {
             gulp.run('serve:start')
         })
     });

@@ -6,11 +6,9 @@ editor.once('load', function() {
     var loaded = {};
     var isLoading = false;
     var loadScene = function(id, callback, settingsOnly) {
-
         if (loaded[id]) {
-            alert(6666)
             if (callback)
-                callback(null, loaded[id].getSnapshot());
+                callback(null, loaded[id].data);
 
             return;
         }
@@ -30,7 +28,7 @@ editor.once('load', function() {
         scene.on('load', function() {
             // cache loaded scene for any subsequent load requests
             loaded[id] = scene;
- 
+
             // notify of operations
             scene.on('op', function(ops, local) {
                 if (local)
@@ -49,14 +47,16 @@ editor.once('load', function() {
 
             // notify of scene load
             var snapshot = scene.data;
-             //console.error(snapshot)
+             // todo
+             //isLoading = false;//??
+             //console.log(snapshot)
             if (settingsOnly !== true) {
-               // alert(3)
                 editor.emit('scene:raw', snapshot);
             }
             if (callback) {
                 callback(null, snapshot);
             }
+             
 
             isLoading = false;
         });
@@ -87,8 +87,6 @@ editor.once('load', function() {
         // all then we are initializing
         // for the first time so load the main scene
         if (! startedLoading) {
-
-           
             editor.call('loadScene', config.scene.id);
         }
     });

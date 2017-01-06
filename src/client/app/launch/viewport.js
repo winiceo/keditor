@@ -42,11 +42,10 @@ editor.once('load', function() {
 
     // try to start preload and initialization of application after load event
     var init = function () {
-        console.log([!done,assets,hierarchy,settings])
         if (!done && assets && hierarchy && settings && (! legacyScripts || sourcefiles) && libraries && loadingScreen) {
             // prevent multiple init calls during scene loading
             done = true;
- 
+
             // load assets that are in the preload set
             app.preload(function (err) {
                 // load scripts that are in the scene data
@@ -309,7 +308,6 @@ editor.once('load', function() {
     });
 
     editor.on('sceneSettings:load', function (data) {
-        
         settings = true;
         sceneSettings = data.json();
         init();

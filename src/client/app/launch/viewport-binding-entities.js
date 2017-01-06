@@ -41,10 +41,9 @@ editor.once('load', function() {
     };
 
     var processEntity = function (obj) {
-
         // create entity
         var entity = createEntity(obj);
- //console.info(entity)
+
         // add components
         var components = obj.json().components;
         for(var key in components)
@@ -80,13 +79,17 @@ editor.once('load', function() {
             // add all awaiting children
             for(var i = 0; i < awaitingParent[obj.get('resource_id')].length; i++) {
                 var awaiting = awaitingParent[obj.get('resource_id')][i];
+                //原来是这个，有问题。
                 entity.addChild(app.root.getByGuid(awaiting.get('resource_id')));
+
+                //var awaitEntity=createEntity(awaiting);
+                //entity.addChild(awaitEntity);
             }
 
             // delete awaiting queue
             delete awaitingParent[obj.get('resource_id')];
         }
-    console.info(entity)
+
         // queue resync hierarchy
         // done on timeout to allow bulk entity creation
         // without sync after each entity
@@ -99,18 +102,16 @@ editor.once('load', function() {
     };
 
     editor.on('entities:add', function (obj) {
+       
         var sceneLoading = editor.call("isLoadingScene");
 
-       sceneLoading=false
-
-      
-       
+        //console.log([ app.root.findByGuid(obj.get('resource_id')) ,sceneLoading])
         if (! app.root.findByGuid(obj.get('resource_id')) && !sceneLoading) {
             // create entity if it does not exist and all initial entities have loaded
-            alert(obj.get('resource_id'))
+             
             processEntity(obj);
         }
-
+        
         // subscribe to changes
         obj.on('*:set', function(path, value) {
             var entity = app.root.findByGuid(obj.get('resource_id'));

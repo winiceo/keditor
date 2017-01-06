@@ -84,7 +84,7 @@ module.exports = function(gulp, plugins) {
 
     gulp.task('client:start',['client:clean','client:editor','client:launch','client:code','client:sharedb'], function() {
         plugins.browserSync.init({
-            proxy: "http://localhost:4444/editor/scene/487784"
+            proxy: "http://localhost:4444/"
         });
     });
 

@@ -8,9 +8,12 @@ let conf = require('nconf')
 let stylus = require('stylus')
 let nib = require('nib')
 let nunjucks = require("nunjucks")
+var cors = require('cors')
 
 module.exports = (app, backend) => {
     "use strict";
+    app.use(cors())
+
     app.use(stylus.middleware({
 
         src: conf.get("RESOURCES"),

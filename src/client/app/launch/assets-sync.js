@@ -6,17 +6,6 @@ editor.once('load', function() {
     var settings = editor.call('project:settings');
     var docs = { };
 
-    // var loading = new ui.Progress();
-    // loading.on('progress:100', function() {
-    //     overlay.hidden = true;
-    // });
-    // overlay.append(loading);
-
-    // editor.method('assets:progress', function(progress) {
-       
-    //     loading.progress = progress;
-    // });
-
     editor.method('loadAsset', function (id, callback) {
         var connection = editor.call('realtime:connection');
 
@@ -97,7 +86,7 @@ editor.once('load', function() {
 
     var onLoad = function(data) {
         editor.call('assets:progress', .5);
- 
+
         var count = 0;
         var scripts = { };
 
@@ -115,12 +104,10 @@ editor.once('load', function() {
         };
 
         var load = function (id) {
-            count++;//没找到原因临时加上
             editor.call('loadAsset', id, function (asset) {
-                
-             
+                count++;
                 editor.call('assets:progress', (count / data.length) * .5 + .5);
- 
+
                 if (! legacyScripts && asset && asset.get('type') === 'script')
                     scripts[asset.get('id')] = asset;
 
@@ -133,7 +120,7 @@ editor.once('load', function() {
                 }
             });
         };
- 
+
         if (data.length) {
 
             var connection = editor.call('realtime:connection');
@@ -167,7 +154,6 @@ editor.once('load', function() {
             auth: true
         })
         .on('load', function(status, data) {
-
             onLoad(data);
         })
         .on('progress', function(progress) {

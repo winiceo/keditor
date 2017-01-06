@@ -38,7 +38,6 @@ editor.once('load', function() {
         for(var key in data.entities) {
             entities.add(new Observer(data.entities[key]));
         }
-        
 
         editor.emit('entities:load', data);
     });

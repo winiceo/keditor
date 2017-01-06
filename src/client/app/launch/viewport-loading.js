@@ -113,7 +113,6 @@ editor.once('load', function () {
                 app.off('preload:progress');
             });
             app.on('preload:progress', setProgress);
-            
             app.on('start', hideSplash);
         });
 

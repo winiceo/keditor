@@ -5,7 +5,7 @@ editor.once('load', function() {
     editor.on('sceneSettings:load', function (sceneSettings) {
         var app = editor.call('viewport:app');
         var updating;
- 
+
         // queue settings apply
         var queueApplySettings = function() {
             if (updating)

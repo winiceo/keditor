@@ -17,7 +17,7 @@ editor.once('load', function() {
     editor.on('entities:add', function(entity) {
         if (entity.sync)
             return;
- 
+
         entity.sync = new ObserverSync({
             item: entity,
             prefix: [ 'entities', entity.get('resource_id') ],
@@ -28,7 +28,6 @@ editor.once('load', function() {
 
     // server > client
     editor.on('realtime:op:entities', function(op) {
-        
         var entity = null;
         if (op.p[1])
             entity = editor.call('entities:get', op.p[1]);

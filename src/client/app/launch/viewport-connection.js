@@ -13,7 +13,6 @@ editor.once('load', function() {
     var hidden = true;
 
     editor.on('realtime:connected', function () {
-        
         if (!hidden) {
             document.body.removeChild(icon);
             hidden = true;

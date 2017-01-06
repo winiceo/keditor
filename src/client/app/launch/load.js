@@ -24,15 +24,12 @@ editor.once('load', function() {
         var sharejsMessage = connection.socket.onmessage;
 
         connection.socket.onmessage = function(msg) {
-
-            console.error(msg.data.startsWith('auth'))
             try {
                 if (msg.data.startsWith('auth')) {
                     if (!auth) {
-
                         auth = true;
                         data = JSON.parse(msg.data.slice(4));
- 
+
                         editor.emit('realtime:authenticated');
                     }
                 } else if (! msg.data.startsWith('permissions') && ! msg.data.startsWith('chat') && ! msg.data.startsWith('selection') && ! msg.data.startsWith('whoisonline') && ! msg.data.startsWith('fs:')) {
